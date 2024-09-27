@@ -7,4 +7,6 @@ echo "we are creating a Q/A website";
 
 echo "we are creating a login logout feature for user";
 
+echo "we will add related questions also";
+
 ?>
