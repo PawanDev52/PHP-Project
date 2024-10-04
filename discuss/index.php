@@ -5,6 +5,9 @@
   <?php include('./client/commonFiles.php') ?>
 </head>
 <body>
-  <?php include('./client/header.php') ?>
+  <?php
+  include('./client/header.php');
+  include('./client/signup.php');
+  ?>
 </body>
 </html>
