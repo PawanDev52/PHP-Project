@@ -23,7 +23,7 @@
     </div>
 
     <div class="col-6 offset-sm-3">
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Signup</button>
     </div>
   </form>
 </div>
