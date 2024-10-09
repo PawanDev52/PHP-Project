@@ -8,9 +8,18 @@ if (isset($_POST['signup'])) {
     $password = $_POST['password'];
     $address = $_POST['address'];
 
-    $conn->prepare("Insert into `users` 
+    $user = $conn->prepare("Insert into `users` 
     (`id`, `username`, `email`, `password`, `address`)
     value(Null, '$username', '$email', '$password', '$address')
     ");
+
+    $result = $user->execute();
+
+    if($result){
+        echo "new user registered";
+    } else{
+        echo "new user not registered";
+    }
+
 }
 ?>
