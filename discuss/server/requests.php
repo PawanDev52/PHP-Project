@@ -1,5 +1,7 @@
 <?php
 // signup form 
+$session_start();
+
 include("../common/db.php");
 
 if (isset($_POST['signup'])) {
@@ -15,11 +17,11 @@ if (isset($_POST['signup'])) {
 
     $result = $user->execute();
 
-    if($result){
+    if ($result) {
         echo "new user registered";
-    } else{
+    } else {
         echo "new user not registered";
     }
-
 }
+
 ?>
