@@ -1,6 +1,6 @@
 <?php
 // signup form 
-$session_start();
+session_start();
 
 include("../common/db.php");
 
@@ -19,6 +19,7 @@ if (isset($_POST['signup'])) {
 
     if ($result) {
         echo "new user registered";
+        $_SESSION["user"] = ["username"=>$username, "email"=>$email];
     } else {
         echo "new user not registered";
     }
