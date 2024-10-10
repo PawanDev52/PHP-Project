@@ -18,8 +18,9 @@ if (isset($_POST['signup'])) {
     $result = $user->execute();
 
     if ($result) {
-        echo "new user registered";
+        
         $_SESSION["user"] = ["username"=>$username, "email"=>$email];
+        header("location: /phpprojects/discuss");
     } else {
         echo "new user not registered";
     }

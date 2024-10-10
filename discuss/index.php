@@ -6,6 +6,7 @@
 </head>
 <body>
   <?php
+  session_start();
   include('./client/header.php');
 
   if(isset($_GET['signup'])){
