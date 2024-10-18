@@ -25,5 +25,4 @@ if (isset($_POST['signup'])) {
         echo "new user not registered";
     }
 }
-
 ?>

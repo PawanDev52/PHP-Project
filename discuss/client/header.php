@@ -18,6 +18,7 @@
           </li>
         <?php } ?>
 
+        
         <?php
         if (!$_SESSION['user']['username']) { ?>
           <li class="nav-item">
