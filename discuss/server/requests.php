@@ -12,7 +12,7 @@ if (isset($_POST['signup'])) {
 
     $user = $conn->prepare("Insert into `users` 
     (`id`, `username`, `email`, `password`, `address`)
-    value(Null, '$username', '$email', '$password', '$address')
+    values(Null, '$username', '$email', '$password', '$address')
     ");
 
     $result = $user->execute();
@@ -22,6 +22,17 @@ if (isset($_POST['signup'])) {
         header("location: /phpprojects/discuss");
     } else {
         echo "new user not registered";
+    }
+} else if(isset($_POST['login'])){
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $query = "select * from users where email='$email' and password='$password'";
+    $result = $conn->query($query);
+    if ($result->num_rows==1) {
+        $_SESSION["user"] = ["username" => $username, "email"=> $email];
+        header("location: /phpprojects/discuss");
+    } else{
+        
     }
 }
 ?>
