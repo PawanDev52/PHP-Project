@@ -17,6 +17,5 @@
     // 
   }
   ?>
-  <!-- discuss project -->
 </body>
 </html>
