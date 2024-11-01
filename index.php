@@ -1,5 +1,9 @@
-<h2>php Project</h2>
-<?php
-echo "this is a new project";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Discuss Project</title>
+</head>
+<body>
 
-?>
+</body>
+</html>
