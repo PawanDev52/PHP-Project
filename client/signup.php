@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>signup</h1>
+  <h1 class="text-center mb-3">Signup</h1>
   <form>
   <div class="col-6 offset-sm-3 mb-3">
     <label for="username" class="form-label">User Name</label>
