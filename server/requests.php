@@ -1,4 +1,7 @@
 <?php
+// including db connection
+include("../common/db.php");
+
 // signup form
 if (isset($_POST['signup'])) {
     echo "User name is " . $_POST['username'] . "<br>";
