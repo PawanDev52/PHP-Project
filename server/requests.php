@@ -20,11 +20,15 @@ if (isset($_POST['signup'])) {
     $result = $user->execute();
 
     if ($result) {
-        $_SESSION["user"] = ["username"=>$username, "email"=>$email];
+        $_SESSION["user"] = ["username" => $username, "email" => $email];
         header("location: /phpprojectdiscuss");
     } else {
         echo "new user not registered";
     }
+} else if (isset($_POST['login'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $query = "select * from users where email='$email' and password='$password'";
 }
 
 ?>
