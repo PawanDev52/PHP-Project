@@ -13,7 +13,7 @@
         if (isset($_SESSION['user'])) {
           if ($_SESSION['user']['username']) { ?>
             <li class="nav-item">
-              <a class="nav-link" href="?login=true">Logout</a>
+              <a class="nav-link" href="./server/requests.php?logout=true">Logout</a>
             </li>
         <?php }
         } ?>

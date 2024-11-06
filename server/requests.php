@@ -34,7 +34,6 @@ if (isset($_POST['signup'])) {
 
     if ($result->num_rows == 1) {
         foreach ($result as $row) {
-            // print_r($row);
             $username = $row['username'];
         }
         $_SESSION["user"] = ["username" => $username, "email" => $email, "password" => $password];
@@ -42,5 +41,8 @@ if (isset($_POST['signup'])) {
     } else {
         echo "user not logged in";
     }
+} else if (isset($_GET['logout'])) {
+    session_unset();
+    header("location: /phpprojectdiscuss");
 }
 ?>
