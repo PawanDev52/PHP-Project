@@ -21,6 +21,7 @@ if (isset($_POST['signup'])) {
 
     if ($result) {
         echo "new user registered";
+        $_SESSION["user"] = ["username"=>$username, "email"=>$email];
     } else {
         echo "new user not registered";
     }
