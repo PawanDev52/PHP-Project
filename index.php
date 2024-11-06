@@ -5,7 +5,8 @@
   <?php include('./client/commonFiles.php') ?>
 </head>
 <body>
-  <?php 
+  <?php
+  session_start();
   include('./client/header.php');
   
   if(isset($_GET['signup'])){
