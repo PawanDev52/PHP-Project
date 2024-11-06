@@ -8,12 +8,28 @@
         <li class="nav-item">
           <a class="nav-link active" href="./">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="?login=true">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="?signup=true">Signup</a>
-        </li>
+
+        <?php
+        if (isset($_SESSION['user'])) {
+          if ($_SESSION['user']['username']) { ?>
+            <li class="nav-item">
+              <a class="nav-link" href="?login=true">Logout</a>
+            </li>
+        <?php }
+        } ?>
+
+        <?php
+        if (!isset($_SESSION['user']['username'])) { ?>
+          <!-- if (!$_SESSION['user']['username']) { ?> -->
+          <!-- the above line of code was making error so i change it according myself -->
+          <li class="nav-item">
+            <a class="nav-link" href="?login=true">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="?signup=true">Signup</a>
+          </li>
+        <?php } ?>
+
         <li class="nav-item">
           <a class="nav-link" href="#">Category</a>
         </li>
