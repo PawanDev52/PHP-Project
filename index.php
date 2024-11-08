@@ -13,8 +13,8 @@
     include('./client/signup.php');
   } else if (isset($_GET['login']) && !isset($_SESSION['user']['username'])) {
     include('./client/login.php');
-  } else {
-    // 
+  } else if(isset($_GET['ask'])) {
+    include('./client/ask.php');
   }
   ?>
 
