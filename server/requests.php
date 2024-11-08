@@ -25,6 +25,7 @@ if (isset($_POST['signup'])) {
     } else {
         echo "new user not registered";
     }
+
 } else if (isset($_POST['login'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -41,8 +42,12 @@ if (isset($_POST['signup'])) {
     } else {
         echo "user not logged in";
     }
+
 } else if (isset($_GET['logout'])) {
     session_unset();
     header("location: /phpprojectdiscuss");
+} else if(isset($_POST['ask'])){
+    print_r($_POST);
+    print_r($_SESSION);
 }
 ?>
