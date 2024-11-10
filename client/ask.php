@@ -14,10 +14,10 @@
     <div class="col-6 offset-sm-3 mb-3">
       <label for="category" class="form-label">Category</label>
       <?php
-        include('category.php');
+      include('category.php');
       ?>
     </div>
-    
+
     <div class="col-6 offset-sm-3">
       <button type="submit" name="ask" class="btn btn-primary">Ask Question</button>
     </div>
