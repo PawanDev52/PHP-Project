@@ -5,7 +5,9 @@
   $query = "select * from questions";
   $result = $conn->query($query);
   foreach($result as $row){
-    print_r($row);
+    $title = $row['title'];
+    echo "<div class=''>$title</div>";
+
   }
   ?>
 </div>
