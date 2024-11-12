@@ -6,7 +6,7 @@
   $result = $conn->query($query);
   foreach($result as $row){
     $title = $row['title'];
-    echo "<div class=''>$title</div>";
+    echo "<div class='m-2 p-3 question-list'>$title</div>";
 
   }
   ?>
