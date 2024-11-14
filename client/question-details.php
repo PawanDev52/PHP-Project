@@ -10,8 +10,11 @@
   echo "<h4 class='mb-3 qsn-dtl'> Question : " . $row['title'] . "</h4>
   <p class='mb-3'>" . $row['description'] . "</p>";
   ?>
-
-  <textarea class="form-control mb-3" placeholder="Write your answer"></textarea>
-  <button class="btn btn-primary">Submit</button>
+  
+  <form action="./server/requests.php" method="post">
+    <input type="hidden" name="question_id" value="<?php echo $qid ?>">
+    <textarea name="answer" class="form-control mb-3" placeholder="Your answer ...."></textarea>
+    <button class="btn btn-primary">Write your answer</button>
+  </form>
   </div>
 </div>

@@ -66,5 +66,7 @@ if (isset($_POST['signup'])) {
     } else {
         echo "Question not added";
     }
+} else if(isset($_POST['answer'])){
+    print_r($_POST);
 }
 ?>
