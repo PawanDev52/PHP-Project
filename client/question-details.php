@@ -6,8 +6,9 @@
   $query = "select * from questions where id = $qid";
   $result = $conn->query($query);
   $row = $result->fetch_assoc();
+  $qt = ucfirst($row['title']);
   
-  echo "<h4 class='mb-3 qsn-dtl'> Question : " . $row['title'] . "</h4>
+  echo "<h4 class='mb-3 qsn-dtl'> Question : " . $qt . "</h4>
   <p class='mb-3'>" . $row['description'] . "</p>";
   include('answers.php');
   ?>
