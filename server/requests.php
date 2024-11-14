@@ -78,7 +78,7 @@ if (isset($_POST['signup'])) {
 
     $result = $query->execute();
     if ($result) {
-        header("location: /phpprojectdiscuss");
+        header("location: /phpprojectdiscuss/?q-id=$question_id");
     } else {
         echo "Answer is not submitted";
     }
