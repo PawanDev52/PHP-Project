@@ -9,8 +9,9 @@
   
   echo "<h4 class='mb-3 qsn-dtl'> Question : " . $row['title'] . "</h4>
   <p class='mb-3'>" . $row['description'] . "</p>";
+  include('answers.php');
   ?>
-  
+
   <form action="./server/requests.php" method="post">
     <input type="hidden" name="question_id" value="<?php echo $qid ?>">
     <textarea name="answer" class="form-control mb-3" placeholder="Your answer ...."></textarea>

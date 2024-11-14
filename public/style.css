@@ -1,17 +1,22 @@
-a{
-    color: #3276fd!important;
+a {
+  color: #3276fd !important;
 }
 
-.question-list{
-    border: 2px solid #ddd;
+.question-list {
+  border: 2px solid #ddd;
 }
 
-.question-list a{
-    font-size: 22px;
-    text-decoration: none;
-    /* color: #1c7194; */
+.question-list a {
+  font-size: 22px;
+  text-decoration: none;
+  /* color: #1c7194; */
 }
 
-.qsn-dtl{
-    color: #1c7194;
+.qsn-dtl {
+  color: #1c7194;
+}
+
+.ans-box {
+  border-bottom: 1px solid #ddd;
+  padding: 5px 10px;
 }
