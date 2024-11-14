@@ -66,7 +66,22 @@ if (isset($_POST['signup'])) {
     } else {
         echo "Question not added";
     }
-} else if(isset($_POST['answer'])){
-    print_r($_POST);
+} else if (isset($_POST['answer'])) {
+    $answer = $_POST['answer'];
+    $question_id = $_POST['question_id'];
+    $user_id = $_SESSION['user']['user_id'];
+
+    $query = $conn->prepare("Insert into `answers`
+    (`answer`, `question_id`, `user_id`)
+    value ('$answer', '$question_id', '$user_id')
+    ");
+
+    $result = $query->execute();
+    if ($result) {
+        header("location: /phpprojectdiscuss");
+    } else {
+        echo "Answer is not submitted";
+    }
 }
+
 ?>
