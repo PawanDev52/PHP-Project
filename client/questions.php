@@ -8,6 +8,8 @@
         $query = "select * from questions where category_id=$cid";
       } else if(isset($_GET['u-id'])){
         $query = "select * from questions where user_id=$uid";
+      } else if(isset($_GET['latest'])){
+        $query = "select * from questions order by id desc";
       } else{
         $query = "select * from questions";
       }
