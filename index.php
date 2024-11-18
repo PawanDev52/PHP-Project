@@ -26,6 +26,9 @@
     include('./client/questions.php');
   } else if(isset($_GET['latest'])){
     include('./client/questions.php');
+  } else if(isset($_GET['search'])){
+    $search = $_GET['search'];
+    include('./client/questions.php');
   } else{
     include('./client/questions.php');
   }

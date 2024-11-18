@@ -10,6 +10,8 @@
         $query = "select * from questions where user_id=$uid";
       } else if(isset($_GET['latest'])){
         $query = "select * from questions order by id desc";
+      } else if(isset($_GET['search'])){
+        $query = "select * from questions where `title` LIKE '%$search%' ";
       } else{
         $query = "select * from questions";
       }
