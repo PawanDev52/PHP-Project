@@ -18,6 +18,9 @@
             <li class="nav-item">
               <a class="nav-link" href="?ask=true">Ask a Question</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="?u-id=<?php echo $_SESSION['user']['user_id'] ?>">My Questions</a>
+            </li>
         <?php }
         } ?>
 
@@ -37,7 +40,7 @@
           <a class="nav-link" href="#">Category</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link" href="#">Latest Questions</a>
+          <a class="nav-link" href="?latest=true">Latest Questions</a>
         </li>
       </ul>
     </div>
