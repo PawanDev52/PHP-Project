@@ -8,8 +8,8 @@
   foreach ($result as $row) {
     $name = ucfirst($row['name']);
     $id = $row['id'];
-    echo "<div class='m-2 p-3 question-list'>
-    <h4 class='m-0 p-0'><a href='?q-id=$id'>$name</a></h4>
+    echo "<div class='m-2 p-3 category-list'>
+    <h4 class='m-0 p-0'><a href='?c-id=$id'>$name</a></h4>
     </div>";
   }
   ?>

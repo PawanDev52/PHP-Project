@@ -12,6 +12,15 @@ a {
   /* color: #1c7194; */
 }
 
+.category-list {
+  border: 2px solid #ddd;
+}
+
+.category-list a {
+  font-size: 18px;
+  text-decoration: none;
+}
+
 .qsn-dtl {
   color: #1c7194;
 }
