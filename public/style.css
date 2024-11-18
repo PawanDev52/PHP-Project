@@ -29,3 +29,8 @@ a {
   border-bottom: 1px solid #ddd;
   padding: 5px 10px;
 }
+
+.my-ques{
+  display: flex;
+  justify-content: space-between;
+}

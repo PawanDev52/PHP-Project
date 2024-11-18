@@ -21,9 +21,11 @@
         $title = $row['title'];
         $qtitle = ucfirst($title);
         $id = $row['id'];
+        // $uid = $row['user_id'];
         echo "<div class='m-2 p-3 question-list'>
-        <h4 class='m-0 p-0'><a href='?q-id=$id'>$qtitle</a></h4>
-        </div>";
+        <h4 class='m-0 p-0 my-ques'><a href='?q-id=$id'>$qtitle</a>";
+        // echo $uid?"<a href='./server/requests.php?delete=$uid'>Delete</a>":NULL;
+        echo "</h4></div>";
       }
       ?>
     </div>
