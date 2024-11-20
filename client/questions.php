@@ -1,30 +1,30 @@
 <div class="container">
   <div class="row">
     <div class="col-8">
-    <h1 class="text-center">Questions</h1>
+      <h1 class="text-center">Questions</h1>
       <?php
       include("./common/db.php");
-      if(isset($_GET['c-id'])){
+      if (isset($_GET['c-id'])) {
         $query = "select * from questions where category_id=$cid";
-      } else if(isset($_GET['u-id'])){
+      } else if (isset($_GET['u-id'])) {
         $query = "select * from questions where user_id=$uid";
-      } else if(isset($_GET['latest'])){
+      } else if (isset($_GET['latest'])) {
         $query = "select * from questions order by id desc";
-      } else if(isset($_GET['search'])){
+      } else if (isset($_GET['search'])) {
         $query = "select * from questions where `title` LIKE '%$search%' ";
-      } else{
+      } else {
         $query = "select * from questions";
       }
-      
+
       $result = $conn->query($query);
       foreach ($result as $row) {
         $title = $row['title'];
         $qtitle = ucfirst($title);
         $id = $row['id'];
-        // $uid = $row['user_id'];
+
         echo "<div class='m-2 p-3 question-list'>
         <h4 class='m-0 p-0 my-ques'><a href='?q-id=$id'>$qtitle</a>";
-        // echo $uid?"<a href='./server/requests.php?delete=$uid'>Delete</a>":NULL;
+        echo $uid ? "<a href='./server/requests.php?delete=$id'>Delete</a>" : NULL;
         echo "</h4></div>";
       }
       ?>
