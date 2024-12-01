@@ -26,6 +26,7 @@ if (isset($_POST['signup'])) {
     } else {
         echo "new user not registered";
     }
+
 } else if (isset($_POST['login'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -45,6 +46,7 @@ if (isset($_POST['signup'])) {
     } else {
         echo "user not logged in";
     }
+
 } else if (isset($_GET['logout'])) {
     session_unset();
     header("location: /phpprojectdiscuss");
@@ -66,6 +68,7 @@ if (isset($_POST['signup'])) {
     } else {
         echo "Question not added";
     }
+
 } else if (isset($_POST['answer'])) {
     $answer = $_POST['answer'];
     $question_id = $_POST['question_id'];
@@ -82,6 +85,7 @@ if (isset($_POST['signup'])) {
     } else {
         echo "Answer is not submitted";
     }
+    
 } else if (isset($_GET['delete'])) {
     $qid = $_GET['delete'];
     $query = $conn->prepare("delete from questions where id = $qid");

@@ -4,6 +4,7 @@
     <div class="col-8">
       <?php
       include("./common/db.php");
+
       $query = "select * from questions where id = $qid";
       $result = $conn->query($query);
       $row = $result->fetch_assoc();
@@ -26,19 +27,19 @@
       $categoryQuery = "select name from category where id=$cid";
       $categoryResult = $conn->query($categoryQuery);
       $categoryRow = $categoryResult->fetch_assoc();
-      
+
       echo "<h3 class='text-center'> " . ucfirst($categoryRow['name']) . ": related questions</h3>";
 
       $query = "select * from questions where category_id=$cid and id!=$qid";
       $result = $conn->query($query);
-      foreach($result as $row){
+
+      foreach ($result as $row) {
         $id = $row['id'];
         $title = ucfirst($row['title']);
         echo "<div class='m-2 p-2 category-list'>
         <h4><a href=?q-id=$id>$title</a></h4>
         </div>";
       }
-
       ?>
     </div>
   </div>
