@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+  <div class="container">
+    <a class="navbar-brand" href="./">
       <img src="./public/logo.png" alt="logo">
     </a>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -13,7 +13,7 @@
         if (isset($_SESSION['user'])) {
           if ($_SESSION['user']['username']) { ?>
             <li class="nav-item">
-              <a class="nav-link" href="./server/requests.php?logout=true">Logout</a>
+              <a class="nav-link" href="./server/requests.php?logout=true">Logout (<?php echo ucfirst($_SESSION['user']['username']) ?>)</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="?ask=true">Ask a Question</a>
@@ -36,17 +36,15 @@
           </li>
         <?php } ?>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#">Category</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link" href="?latest=true">Latest Questions</a>
         </li>
       </ul>
-      <form class="d-flex" action="">
+      
+    </div>
+    <form class="d-flex" action="">
         <input class="form-control me-2" name="search" type="search" placeholder="Search questions">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
-    </div>
   </div>
 </nav>

@@ -4,6 +4,8 @@
       <h1 class="text-center">Questions</h1>
       <?php
       include("./common/db.php");
+      $uid = $uid ?? null;
+      
       if (isset($_GET['c-id'])) {
         $query = "select * from questions where category_id=$cid";
       } else if (isset($_GET['u-id'])) {
